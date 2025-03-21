@@ -19,7 +19,8 @@ const saveOptions = () => {
   const restoreOptions = () => {
     chrome.storage.sync.get(
       ['googleCseCx']).then((result)=>{
-        document.getElementById('google_cse_cx').value = result.googleCseCx
+        cx = result.googleCseCx || ''
+        document.getElementById('google_cse_cx').value = cx
       })
   };
   

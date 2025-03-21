@@ -7,10 +7,9 @@ function changeFrameHeight() {
 
 window.onresize = function () {
     changeFrameHeight();
-
 }
 
-chrome.storage.sync.get(['googleCseCx']).then((result) => {
+//chrome.storage.sync.get(['googleCseCx']).then((result) => {
     script = document.createElement('iframe');
     script.id = "theFrame"
     script.style = "border:none"
